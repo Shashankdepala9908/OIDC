@@ -1,0 +1,12 @@
+<h2>Welcome to Secure OIDC SPA</h2>
+
+<div *ngIf="!isAuthenticated">
+  <button (click)="login()">Login</button>
+</div>
+
+<div *ngIf="isAuthenticated">
+  <p>✅ You are logged in!</p>
+  <p><strong>User Info:</strong></p>
+  <pre>{{ userData | json }}</pre>
+  <button (click)="logout()">Logout</button>
+</div>
